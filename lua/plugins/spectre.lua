@@ -8,7 +8,7 @@ return {
 
         -- Keybindings
         local spectre = require("spectre")
-        vim.keymap.set('n', '<leader>S', '<cmd>lua require().toggle()<CR>', {
+        vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
             desc = "Toggle Spectre"
         })
         vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
