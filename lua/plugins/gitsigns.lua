@@ -10,6 +10,7 @@ return
         vim.wo.number = true         -- Show absolute line numbers
         vim.wo.relativenumber = true -- (optional) Show relative line numbers
 
+        local gs = require('gitsigns')
         vim.keymap.set('n', ']c', function() gs.nav_hunk('next') end, { desc = "Next Git hunk" })
         vim.keymap.set('n', '[c', function() gs.nav_hunk('prev') end, { desc = "Previous Git hunk" })
         vim.keymap.set('n', '<leader>hs', gs.stage_hunk, { desc = "Stage Git hunk" })
